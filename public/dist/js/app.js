@@ -55,14 +55,15 @@ todoAdd.addEventListener("click", (e) => {
 
   let todoText = todoInput.value;
   todoInput.value = "";
-  addTodoToLocalStorage({ text: todoText, isCompleted: false });
+  if (todoText) {
+    addTodoToLocalStorage({ text: todoText, isCompleted: false });
 
-  addTodo(todoText);
-
-  updateTodoCount(
-    todos.childElementCount,
-    document.querySelectorAll(".todo--completed").length
-  );
+    addTodo(todoText);
+    updateTodoCount(
+      todos.childElementCount,
+      document.querySelectorAll(".todo--completed").length
+    );
+  }
 });
 
 todos.addEventListener("click", (e) => {
