@@ -1,0 +1,231 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#9d50bb), to(#6e48aa));
+  background: linear-gradient(to right bottom, #9d50bb, #6e48aa);
+  min-height: 100vh;
+  color: #1f1f1f;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.justify-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  margin: 4rem 0rem;
+  width: 80%;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  background: #e3e3e3;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  padding: 4rem;
+}
+
+.heading__add-todo {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-top: 4rem;
+}
+
+.heading__add-todo input {
+  padding: 1.5rem 2rem;
+  border: none;
+  border-radius: 0.8rem;
+  color: #1f1f1f;
+  margin-right: 1.6rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: inherit;
+}
+
+.heading__add-todo input:focus {
+  outline: none;
+}
+
+.heading__add-todo input::-webkit-input-placeholder {
+  color: #1f1f1f;
+  opacity: 0.5;
+}
+
+.heading__add-todo input:-ms-input-placeholder {
+  color: #1f1f1f;
+  opacity: 0.5;
+}
+
+.heading__add-todo input::-ms-input-placeholder {
+  color: #1f1f1f;
+  opacity: 0.5;
+}
+
+.heading__add-todo input::placeholder {
+  color: #1f1f1f;
+  opacity: 0.5;
+}
+
+.heading__add-todo button {
+  padding: 1.5rem 4.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: inherit;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, right bottom, from(#9d50bb), to(#6e48aa));
+  background: linear-gradient(to right bottom, #9d50bb, #6e48aa);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.heading__add-todo button:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.heading__add-todo button:active {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.info__date {
+  font-size: 2.6rem;
+}
+
+.info__remaining-todos {
+  opacity: 0.5;
+}
+
+.info__day {
+  font-weight: 600;
+}
+
+.tab__incomplete, .tab__completed {
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.tab__incomplete {
+  margin-right: 3rem;
+}
+
+.active {
+  opacity: 1;
+}
+
+.todos {
+  padding: 2rem 4rem;
+}
+
+.todo {
+  padding: 2rem 0rem;
+  border-bottom: 1.5px solid #e3e3e3;
+}
+
+.todo--completed {
+  text-decoration: line-through;
+}
+
+.todo__indicator, .todo__delete {
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.todo__indicator:hover, .todo__delete:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.todo__indicator:active, .todo__delete:active {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.todo__text {
+  margin-left: 1.6rem;
+  font-size: 1.8rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media only screen and (max-width: 680px) {
+  .heading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .heading__info {
+    text-align: center;
+  }
+  .heading__tab {
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 613px) {
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .heading__add-todo {
+    width: 100%;
+  }
+  .heading__add-todo input {
+    margin-right: 0rem;
+    margin-bottom: 1.6rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

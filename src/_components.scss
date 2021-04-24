@@ -1,0 +1,128 @@
+// CONTAINER
+.container {
+  margin: 4rem 0rem;
+  width: 80%;
+  background: $white-color;
+  border-radius: 1.5rem;
+  box-shadow: 0px 10px 20px 0px rgba($black-color, 0.1);
+}
+
+// HEADING
+.heading {
+  background: $background-color;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  padding: 4rem;
+
+  &__add-todo {
+    flex-basis: 100%;
+    margin-top: 4rem;
+
+    input {
+      padding: 1.5rem 2rem;
+      border: none;
+      border-radius: 0.8rem;
+      color: $text-color;
+      margin-right: 1.6rem;
+      flex-grow: 1;
+      font-size: inherit;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $text-color;
+        opacity: 0.5;
+      }
+    }
+
+    button {
+      padding: 1.5rem 4.6rem;
+      border: none;
+      border-radius: 0.8rem;
+      font-size: inherit;
+      color: $white-color;
+      background: linear-gradient(
+        to right bottom,
+        $secondary-color,
+        $primary-color
+      );
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.07);
+      }
+
+      &:active {
+        transform: scale(1.01);
+      }
+    }
+  }
+}
+
+.info {
+  &__date {
+    font-size: 2.6rem;
+  }
+
+  &__remaining-todos {
+    opacity: 0.5;
+  }
+
+  &__day {
+    font-weight: 600;
+  }
+}
+
+.tab {
+  &__incomplete,
+  &__completed {
+    cursor: pointer;
+    opacity: 0.5;
+    user-select: none;
+  }
+
+  &__incomplete {
+    margin-right: 3rem;
+  }
+}
+
+.active {
+  opacity: 1;
+}
+
+// TASKS
+.todos {
+  padding: 2rem 4rem;
+}
+
+.todo {
+  padding: 2rem 0rem;
+  border-bottom: 1.5px solid $background-color;
+
+  &--completed {
+    text-decoration: line-through;
+  }
+
+  &__indicator,
+  &__delete {
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.07);
+    }
+
+    &:active {
+      transform: scale(1.01);
+    }
+  }
+
+  &__text {
+    margin-left: 1.6rem;
+    font-size: 1.8rem;
+    flex-grow: 1;
+  }
+}

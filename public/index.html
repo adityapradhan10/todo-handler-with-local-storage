@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <title>Todo handler</title>
+  </head>
+  <body class="flex justify-center align-center">
+    <main class="container">
+      <div class="heading flex wrap justify-sb align-center">
+        <div class="heading__info">
+          <p class="info__date">
+            <span class="info__day" id="day"></span>
+            <span id="date"></span>
+          </p>
+          <p class="info__remaining-todos" id="remaining-todos"></p>
+        </div>
+        <div class="heading__tab flex" id="tab">
+          <div class="tab__incomplete">Incomplete</div>
+          <div class="tab__completed">Completed</div>
+        </div>
+        <div class="heading__add-todo">
+          <form class="flex">
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="Enter a todo"
+              required
+            />
+            <button type="submit" id="todo-add">Add Todo</button>
+          </form>
+        </div>
+      </div>
+      <div class="todos" id="todos"></div>
+    </main>
+
+    <script src="./dist/js/updateDate.js"></script>
+    <script src="./dist/js/storage.js"></script>
+    <script src="./dist/js/app.js"></script>
+  </body>
+</html>
