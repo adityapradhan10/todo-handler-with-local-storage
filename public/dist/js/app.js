@@ -43,12 +43,11 @@ const loadTodo = () => {
   todos.forEach((todo) => addTodo(todo.text, todo.isCompleted));
 };
 
+loadTodo();
 updateTodoCount(
   todos.childElementCount,
   document.querySelectorAll(".todo--completed").length
 );
-
-loadTodo();
 
 todoAdd.addEventListener("click", (e) => {
   e.preventDefault();
